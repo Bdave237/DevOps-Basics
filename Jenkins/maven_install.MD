@@ -6,28 +6,28 @@ Maven is a code build tool which used to convert your code to an artifact. this 
 1. Jenkins server
 
 #### Install Maven on Jenkins
-1. Download maven packages https://maven.apache.org/download.cgi onto Jenkins server. In this case, I am using /opt/maven as my installation directory
- - Link : https://maven.apache.org/download.cgi
-    ```sh
-     # Creating maven directory under /opt
-     mkdir /opt/maven
-     cd /opt/maven
-     # downloading maven version 3.6.0
-     wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
-     tar -xvzf apache-maven-3.6.1-bin.tar.gz
-     ```
+1. Install Apache Maven on your EC2 instance. First, enter the following to add a repository with a Maven package
+  
+     # downloading maven from Fedora Repository
+     
+     	sudo wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+     
 	
-1. Setup M2_HOME and M2 paths in .bash_profile of the user and add these to the path variable
-   ```sh
-   vi ~/.bash_profile
-   M2_HOME=/opt/maven/apache-maven-3.6.1
-   M2=$M2_HOME/bin
-   PATH=<Existing_PATH>:$M2_HOME:$M2
-   ```
+2. Enter the following to set the version number for the packages.
+
+	sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+	
+3. Then you can use yum to install Maven.
+
+	sudo yum install -y apache-maven
+4. The Gremlin libraries require Java 8
+
+Make sure you install java 8 on your Jenkins Server.
+
 #### Checkpoint 
 1. logoff and login to check maven version
   
-    ```sh
+Run the following command to check version of Maven installed.
     mvn --version
     ```
 So far we have completed the installation of maven software to support maven plugin on the jenkins console. Let's jump onto Jenkins to complete the remaining steps. 
