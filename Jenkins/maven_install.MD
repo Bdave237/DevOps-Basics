@@ -35,6 +35,7 @@ Make sure you install java 8 on your Jenkins Server.
 6. Make sure you add your Maven home into your PATH by editing .bashrc in root home directory. run following commands to edit .bashrc
 
 	cd 
+	
 	vi .bashrc
     
    add following line at end of your .bashrc file
@@ -43,7 +44,7 @@ Make sure you install java 8 on your Jenkins Server.
 	
     run the following command to make new changes in .bashrc effective
     
-	. ~/.bashrc
+	./.bashrc
 
 #### Checkpoint 
 7. logoff and login to check maven version
