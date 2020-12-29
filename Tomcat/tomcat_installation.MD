@@ -9,7 +9,7 @@
    # Create tomcat directory
    cd /opt
    wget https://apache.osuosl.org/tomcat/tomcat-8/v8.5.61/bin/apache-tomcat-8.5.61.tar.gz
-   tar -xvzf /opt/apache-tomcat-8.5.35.tar.gz
+   tar -xvzf apache-tomcat-8.5.61.tar.gz
    ```
 1. give executing permissions to startup.sh and shutdown.sh which are under bin. 
    ```sh
