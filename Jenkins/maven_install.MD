@@ -12,7 +12,7 @@ For this installation, we will use/opt/maven as our installation PATH
 	 sudo su
 	cd /opt
 
-2. Install Apache Maven on your EC2 instance. Go to Maven website and copy link to download maven (https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz)
+2. Install Apache Maven on your EC2 instance. Go to Maven website and copy link to download maven (https://maven.apache.org/download.cgi)
   
 # downloading maven into your /opt directory. run bellow command
      
