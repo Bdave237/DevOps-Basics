@@ -28,6 +28,19 @@
    ```sh
    docker run -d --name test-tomcat-server -p 8080:8080 tomcat
    ```
+   
+ ######  Make sure you edit sshd_config file to enable ssh authentication
+ `````
+ vi /etc/sshd_config
+ ``````
+
+ 
+ change PasswordAuthentication to yes or uncomment it out.
+ 
+ safe file and reload sshd deamon
+ `````  
+       service sshd reload
+ ````
 
 ## Docker Installation on CentOS server
 ##### Referance URL : https://docs.docker.com/install/linux/docker-ce/centos/#install-using-the-repository
