@@ -31,7 +31,7 @@
    
  ######  Make sure you edit sshd_config file to enable ssh authentication
  `````
- vi /etc/sshd_config
+ vi /etc/ssh/sshd_config
  ``````
 
  
