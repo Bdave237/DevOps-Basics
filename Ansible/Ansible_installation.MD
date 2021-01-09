@@ -98,7 +98,8 @@ Add ansible-id to localhost by running the following command
       ```sh
       sh-copy-id localhost
       ```
--Test connectivity to all servers by running ping module
+
+Test connectivity to all servers by running ping module
    ```sh
    ansible all -m ping
    ```
