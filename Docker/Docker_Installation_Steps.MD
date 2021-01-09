@@ -29,9 +29,9 @@
    docker run -d --name test-tomcat-server -p 8080:8080 tomcat
    ```
    
- ######  Make sure you edit sshd_config file to enable ssh authentication
+######  Make sure you edit sshd_config file to enable ssh authentication
  `````
- vi /etc/ssh/sshd_config
+   vi /etc/ssh/sshd_config
 
 Update PasswordAuthentication to yes.
  
@@ -39,21 +39,20 @@ Update PasswordAuthentication to yes.
  
  safe file and reload sshd deamon
  
-       service sshd reload
- ````
+   service sshd reload
 
 
 #### Intergrating Docker with Jenkins
-1. Open up your Jenkins console
-- Navigate to:
+   1. Open up your Jenkins console
+   - Navigate to:
 
-   Manage Jenkins--> manage Plugins--> Available
+      Manage Jenkins--> manage Plugins--> Available
 
 
 2. search for publish over ssh plugin and install without restart.
--Navigate to:
+   -Navigate to:
 
-   manage jenkins--> configure systems--> Publish over SSH
+      manage jenkins--> configure systems--> Publish over SSH
 
 
 3. select Add to add new SSH server.
@@ -77,6 +76,7 @@ Update PasswordAuthentication to yes.
       
       Update the PasswordAuthentication section to yes.
   Test connection again and apply and safe configuration if connection is succesfull.
+
 
 
 ## Docker Installation on CentOS server
