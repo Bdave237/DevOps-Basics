@@ -42,12 +42,14 @@
 #### Intergrating Docker with Jenkins
 1. Open up your Jenkins console
 -Navigate to:
+
    ``` Manage Jenkins--> manage Plugins--> Available
    ```
 
 
 2. search for publish over ssh plugin and install without restart.
 -Navigate to:
+
    ```manage jenkins--> configure systems--> Publish over SSH
    ```
 
@@ -59,6 +61,7 @@
 -Test connection if successfull.
 -If you receive error message;
 - Go to Jenkins server and edit sshd_config file
+
    ```vi /etc/ssh/sshd_config
    ```
 -Update the PasswordAuthentication section to yes.
