@@ -34,8 +34,10 @@
    vi /etc/ssh/sshd_config
    ```
 
--Update PasswordAuthentication to yes. 
--change PasswordAuthentication to yes or uncomment it out.
+-Update PasswordAuthentication to yes
+
+-change PasswordAuthentication to yes or uncomment it out
+
 -safe file and reload sshd deamon
 
    ```sh
@@ -52,7 +54,8 @@
    ```
 
 
-2. search for publish over ssh plugin and install without restart.
+2. search for publish over ssh plugin and install without restart
+
 -Navigate to:
 
    ```sh
@@ -61,17 +64,24 @@
 
 3. select Add to add new SSH server.
 -Give a name to your SSH server
+
 -copy IP address of ya Docker server and paste in Hostname
+
 -username is dockeradmin (docker admin user you created)
+
 -check box to select password authentication and key in password for docker admin user.
+
 -Test connection if successfull.
+
 -If you receive error message;
-- Go to Jenkins server and edit sshd_config file
 
    ```sh
+   Go to Jenkins server and edit sshd_config file
+   
    vi /etc/ssh/sshd_config
    ```
 -Update the PasswordAuthentication section to yes.
+
 -Test connection again and apply and safe configuration if connection is succesfull.
 
 
