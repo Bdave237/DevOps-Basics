@@ -30,7 +30,7 @@
    ```
    
 ######  Make sure you edit sshd_config file to enable ssh authentication
- `````
+
    vi /etc/ssh/sshd_config
 
 Update PasswordAuthentication to yes.
