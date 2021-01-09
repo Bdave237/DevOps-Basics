@@ -55,7 +55,7 @@ Update PasswordAuthentication to yes.
 
  Navigate to 
  ```````
-   manage jenkins--> configure systems--> Publish over SSH
+manage jenkins--> configure systems--> Publish over SSH
 ```
 
 3. select Add to add new SSH server.
