@@ -37,7 +37,9 @@
 -Update PasswordAuthentication to yes. 
 -change PasswordAuthentication to yes or uncomment it out.
 -safe file and reload sshd deamon
-   ```service sshd reload
+
+   ```sh
+   service sshd reload
    ```
 
 
@@ -45,14 +47,16 @@
 1. Open up your Jenkins console
 -Navigate to:
 
-   ``` Manage Jenkins--> manage Plugins--> Available
+   ```sh
+   Manage Jenkins--> manage Plugins--> Available
    ```
 
 
 2. search for publish over ssh plugin and install without restart.
 -Navigate to:
 
-   ```manage jenkins--> configure systems--> Publish over SSH
+   ```sh
+   manage jenkins--> configure systems--> Publish over SSH
    ```
 
 3. select Add to add new SSH server.
@@ -64,7 +68,8 @@
 -If you receive error message;
 - Go to Jenkins server and edit sshd_config file
 
-   ```vi /etc/ssh/sshd_config
+   ```sh
+   vi /etc/ssh/sshd_config
    ```
 -Update the PasswordAuthentication section to yes.
 -Test connection again and apply and safe configuration if connection is succesfull.
