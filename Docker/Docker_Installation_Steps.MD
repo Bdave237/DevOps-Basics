@@ -39,7 +39,6 @@
 -change PasswordAuthentication to yes or uncomment it out
 
 -safe file and reload sshd deamon
-
    ```sh
    service sshd reload
    ```
