@@ -83,7 +83,39 @@
 
 -Test connection again and apply and safe configuration if connection is succesfull.
 
+#### Deploy to Docker image
+1. Create Dockerfile
+   ```sh
+   su - dockeradmin
+   cd /home/dockeradmin
+   vi Dockerfile
+   ```
+   
+-Paste the following content into dockerfile and save file
+   ```sh
+   FROM tomcat:latest
 
+   MAINTAINER biggclau
+
+   COPY ./webapp.war /usr/local/tomcat/webapps
+   ```
+2. Edit Maven job on jenkins console  to deploy to Docker container "DockerDeploy"
+
+   ```sh
+   create new item
+   select git and add URL for your repo
+   select post build sactions and select "post build artifacts over SSH
+   select Name "docker-host" from drop down
+   source files = Webapp/target/*.war
+   Remove prefix = Webapp/target
+   Remote directory = .
+   Exec command = "paste below code "
+   cd /home/dockeradmin; docker build -t biggclau-image .; docker run -d --name biggclau-container -p 8080:8080 biggclau-image
+   Apply and Save changes
+   ```
+3. run maven job DockerDeploy
+- Validate you can access webapp from your browser.
+   
 
 ## Docker Installation on CentOS server
 ##### Referance URL : https://docs.docker.com/install/linux/docker-ce/centos/#install-using-the-repository
