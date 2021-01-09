@@ -68,3 +68,46 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    ```sh 
    ansible all -m ping
    ```
+### switch to Docker server and add ansadmin
+
+   ```sh
+   useradd ansadmin
+   passwd ansadmin
+   ```
+### switch to Ansible server
+make sure your in ansadmin home directory and copy over ssh key ID for ansadmin to Docker server 
+   ```sh
+   hostname ansible-control-node
+   sudo su -
+   su - ansadmin
+   ssh-copy-id ansadmin@"IP-ADDR_DOCKER-SERVER"
+   ##ssh into docker server to confirm passwordless authentication
+   ssh ansadmin@"Docker-Server-IP"
+   ```
+
+### test connectivity by creating hostfile
+make sure your in ansible server and create hostfile
+   ```sh
+   cd /etc/ansible
+   ls
+   sudo vi hosts
+   add ip address of your docker server and then next line type in localhost
+   save file
+   ```
+Add ansible-id to localhost by running the following command
+      ```sh
+      sh-copy-id localhost
+      ```
+-Test connectivity to all servers by running ping module
+   ```sh
+   ansible all -m ping
+   ```
+
+   
+   
+
+
+
+
+
+
