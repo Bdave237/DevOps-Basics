@@ -95,6 +95,7 @@ make sure your in ansible server and create hostfile
    save file
    ```
 Add ansible-id to localhost by running the following command
+
       ```sh
       sh-copy-id localhost
       ```
